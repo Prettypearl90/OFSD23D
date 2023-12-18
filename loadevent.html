@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS page load events</title>
+</head>
+<body>
+
+    <a href="https://skillsafari.in/">skillsafari</a>
+    <script>
+        addEventListener('DOMContentLoaded', (event) => {
+            console.log('Im DOM Content!');
+        });
+
+        addEventListener('load', (event) => {
+            console.log('Im Page!');
+        });
+
+        addEventListener('beforeunload', (event) => {
+            // show the confirmation dialog
+            event.preventDefault();
+            // Google Chrome requires returnValue to be set.
+            event.returnValue = '';
+        });
+
+        addEventListener('unload', (event) => {
+            // send analytic data
+            console.log("unloaded");
+        });
+    </script>
+</body>
+</html>
