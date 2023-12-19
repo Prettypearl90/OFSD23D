@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Keyboard Event</title>
+</head>
+<body>
+    <p>Type any text </p>
+
+    <input type="text" id="inp">
+
+    <script>
+    document.getElementById("inp").addEventListener("keydown", changeColor);
+    
+    
+    function changeColor() {
+        
+        document.getElementById("inp").style.backgroundColor = "green";
+       
+    }
+    </script> 
+</body>
+</html>
