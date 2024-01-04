@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- getElementsById() -->
+   
+    <p id="B-Name">Skill Safari</p>
+
+
+    <!-- getElementsByName() -->
+        
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="Gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="Gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="others" name="Gender" value="Others">
+        <label for="others">Others</label><br><br>
+       
+        <!-- getElementsByTagName() -->
+
+
+        <h1>Welcome</h1>
+        <h1>Welcome</h1>
+        <h1>Welcome</h1>
+        
+        <!-- getElementsByClassName() -->
+        
+        <h1 class="ex">Hello every one</h1>
+        <p>one</p>
+        <p>two</p>
+        <h1>Welcome</h1>
+        <h1 class="ex">Skill Safari</h1>
+        <p>three</p>
+        <p>four</p>
+        <h1>Skill Safari</h1>
+
+        <ul id="menu">
+            <li class="item">Tea</li>
+            <li class="item">Coffee</li>
+            <li class="item">Milk</li>
+
+        </ul>
+
+        <!-- Traversing elements -->
+
+        <div id="batch">
+            <p class="OFSD23C">This is Offline Session!</p>
+        </div>
+
+        <div id="batches">
+            <div>OFSD23A</div>
+            <div>OFSD23B</div>
+            <div class="current">OFSD23C</div>
+            <div>OFSD23D</div>
+            <div>OFSD23E</div>
+        </div>
+
+       <p style="visibility: hidden;" id="para">This is Online Batches</p> 
+
+        <div class="session"> This is Demo session
+
+            <div>JavaScript</div>
+        </div> 
+
+
+    <!-- Workings on Attributes-->
+
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+    
+    <script>
+        const para = document.querySelector("#para");
+        console.log(para.textContent)
+        console.log(para.innerText)
+    </script>
+</body>
+</html>
