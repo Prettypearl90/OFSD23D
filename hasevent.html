@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS hashchange event</title>
+</head>
+<style>
+    #content {
+      display: none;
+    }
+  </style>
+<body>
+  
+    <button onclick="changeHash()">Change Hash</button>
+    <div id="content">
+      <p>Hash Changed!</p>
+    </div>
+  
+  <script>
+    function changeHash() {
+      window.location.hash = "newhash";
+    }
+
+    window.addEventListener('hashchange', function() {
+        console.log(`The current URL hash is ${location.hash}`);
+         document.getElementById('content').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

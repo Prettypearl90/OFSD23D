@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Example</title>
+</head>
+<body>
+
+    <h2>Checkbox Example</h2>
+
+    <label>
+        <input type="checkbox" id="myCheckbox"> Enable Feature
+    </label>
+
+    <p id="status">Feature is currently disabled.</p>
+
+    <script>
+        // Get the checkbox element
+        var checkbox = document.getElementById('myCheckbox');
+
+        // Get the status paragraph element
+        var statusParagraph = document.getElementById('status');
+
+        // Add a change event listener to the checkbox
+        checkbox.addEventListener('change', function() {
+            // Check if the checkbox is checked
+            if (checkbox.checked) {
+                // Update the status paragraph text when the checkbox is checked
+                statusParagraph.textContent = 'Feature is now enabled!';
+            } else {
+                // Update the status paragraph text when the checkbox is unchecked
+                statusParagraph.textContent = 'Feature is currently disabled.';
+            }
+        });
+    </script>
+
+</body>
+</html>

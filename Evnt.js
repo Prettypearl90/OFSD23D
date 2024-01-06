@@ -51,14 +51,14 @@
 
 // Examples for removeEventListener() 
 
-document.getElementById("po").addEventListener("mousemove", disp);
+// document.getElementById("po").addEventListener("mousemove", disp);
 
-function disp() {
-     //document.getElementById("ps").innerHTML +="Mouseovered!" + "<br>";
-    document.getElementById("ps").innerHTML = Math.random(); // mousemove
+// function disp() {
+//      //document.getElementById("ps").innerHTML +="Mouseovered!" + "<br>";
+//     document.getElementById("ps").innerHTML = Math.random(); // mousemove
 
-}
+// }
 
-function rmvhndlr() {
-  document.getElementById("po").removeEventListener("mousemove", disp);
-}
+// function rmvhndlr() {
+//   document.getElementById("po").removeEventListener("mousemove", disp);
+// }

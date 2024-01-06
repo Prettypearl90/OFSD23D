@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+</head>
+<body>
+
+    <script>
+        // Check if local storage is supported by the browser
+        if (typeof(Storage) !== "undefined") {
+            // Store data in local storage
+            localStorage.setItem("username", "PrettyPearl");
+
+            // Retrieve data from local storage
+            var storedUsername = localStorage.getItem("username");
+
+            // Display the retrieved data
+            alert("Welcome back, " + storedUsername + "!");
+        } else {
+            // Browser doesn't support local storage
+            alert("Sorry, your browser does not support local storage.");
+        }
+    </script>
+
+</body>
+</html>

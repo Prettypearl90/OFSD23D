@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage Example</title>
+</head>
+<body>
+
+    <script>
+        // Check if session storage is supported by the browser
+        if (typeof(Storage) !== "undefined") {
+            // Store data in session storage
+            sessionStorage.setItem("language", "English");
+
+            // Retrieve data from session storage
+            var storedLanguage = sessionStorage.getItem("language");
+
+            // Display the retrieved data
+            alert("Your preferred language is " + storedLanguage + ".");
+        } else {
+            // Browser doesn't support session storage
+            alert("Sorry, your browser does not support session storage.");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event Delegation</title>
+</head>
+<body>
+    <ul id="menu">
+        <li><a id="home">home</a></li>
+        <li><a id="services">Services</a></li>
+        <li><a id="contact">Contact us</a></li>
+    </ul>
+    <Script>
+        let menu = document.querySelector('#menu');
+
+menu.addEventListener('click', (event) => {
+    let target = event.target;
+
+    switch(target.id) {
+        case 'home':
+            console.log('You are in Home');
+            break;
+        case 'services':
+            console.log('Training and Developing');
+            break;
+        case 'contact':
+            console.log('Coimbatore');
+            break;
+    }
+});
+    </Script>
+</body>
+</html>

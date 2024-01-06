@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Select Option Example</title>
+</head>
+<body>
+    <label for="fruitSelect">Select a fruit:</label>
+  <select id="fruitSelect" onchange="updateSelectedFruit()">
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+    <option value="orange">Orange</option>
+    <option value="grape">Grape</option>
+  </select>
+
+  <p id="selectedFruit">You selected: <span id="displaySelectedFruit">Apple</span></p>
+  <script>
+    
+
+// Function to update the selected fruit information
+function updateSelectedFruit() {
+  // Select the <select> element by its ID
+  var selectElement = document.getElementById('fruitSelect');
+
+  // Get the selected option value
+  var selectedValue = selectElement.value;
+
+  // Select the <span> element by its ID
+  var displayElement = document.getElementById('displaySelectedFruit');
+
+  // Update the text content of the <span> element
+  displayElement.textContent = selectedValue;
+}
+
+  </script>
+</body>
+</html>

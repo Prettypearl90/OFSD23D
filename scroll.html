@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Scroll Event</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        section {
+            height: 1000px; /* Add enough height for scrolling */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <body>
+
+        <header id="main-header">Header</header>
+        
+        <section>
+            <h1>Main Content</h1>
+            <p>Scroll down to see the header change color.</p>
+        </section>
+        
+        <script>
+            // Get the header element
+            const header = document.getElementById('main-header');
+        
+            // Function to handle scroll event
+            function handleScroll() {
+                // Check the scroll position
+                const scrollPosition = window.scrollY;
+        
+                // Change header background color based on scroll position
+                if (scrollPosition > 50) {
+                    header.style.backgroundColor = '#555';
+                } else {
+                    header.style.backgroundColor = '#333';
+                }
+            }
+        
+            // Attach the handleScroll function to the scroll event
+            window.addEventListener('scroll', handleScroll);
+        </script>
+</body>
+</html>

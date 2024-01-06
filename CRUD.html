@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery CRUD Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    /* Add some basic styling for demonstration purposes */
+    ul { list-style-type: none; padding: 0; }
+    li { margin-bottom: 5px; }
+    button { margin-left: 5px; }
+  </style>
+</head>
+<body>
+
+  <h1>jQuery CRUD Example</h1>
+
+  <input type="text" id="newItem" placeholder="Add new item">
+  <button id="addItemBtn">Add Item</button>
+
+  <ul id="itemList"></ul>
+
+  <script>
+    // Wait for the document to be ready
+    $(document).ready(function () {
+      // Initialize an array to store items
+      const items = [];
+
+      // Function to render the list
+      function renderList() {
+        const itemList = $("#itemList");
+        itemList.empty(); // Clear the existing list
+
+        // Iterate through the items and append them to the list
+        items.forEach(function (item, index) {
+          const li = $("<li>").text(item);
+          const deleteBtn = $("<button>").text("Delete").click(function () {
+            // Remove the item when the Delete button is clicked
+            items.splice(index, 1);
+            renderList(); // Re-render the list
+          });
+          li.append(deleteBtn);
+          itemList.append(li);
+        });
+      }
+
+      // Add Item button click event
+      $("#addItemBtn").click(function () {
+        const newItem = $("#newItem").val();
+        if (newItem) {
+          items.push(newItem);
+          renderList(); // Re-render the list after adding a new item
+          $("#newItem").val(""); // Clear the input field
+        }
+      });
+
+      // Initial render of the list
+      renderList();
+    });
+  </script>
+
+</body>
+</html>

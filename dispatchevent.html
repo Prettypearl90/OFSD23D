@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS dispatchEvent</title>
+</head>
+<body>
+
+    <button class="btn">Test</button>
+
+    <Script>
+            let btn = document.querySelector('.btn');
+
+            btn.addEventListener('click', function () {
+                console.log('Mouse Clicked');
+            });
+
+            let clickEvent = new Event('click');
+            btn.dispatchEvent(clickEvent);
+    </Script>
+</body>
+</html>
